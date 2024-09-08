@@ -2,16 +2,16 @@ import { Request, Response, NextFunction } from 'express';
 
 import { MySql2Database } from 'drizzle-orm/mysql2/driver';
 import { HttpStatus } from '../../../../../lib/config';
-import { PayReportsService } from './pay_reports.service';
+import { PayrollReportsService } from './pay_reports.service';
 
-export class PayReportsController {
-  private payreportsService: PayReportsService;
+export class PayrollReportsController {
+  private payrollReportsService: PayrollReportsService;
 
   constructor(pool: MySql2Database) {
-    this.payreportsService = new PayReportsService(pool);
+    this.payrollReportsService = new PayrollReportsService(pool);
   }
 
-  async createPayRoll(req: Request, res: Response, next: NextFunction) {
+  async createPayrollReports(req: Request, res: Response, next: NextFunction) {
     try {
       const {
         on_payroll_id,
@@ -21,7 +21,7 @@ export class PayReportsController {
         total_benefits,
       } = req.body;
 
-      await this.payreportsService.createPayReports({
+      await this.payrollReportsService.createPayrollReports({
         on_payroll_id,
         netpay,
         grosspay,
