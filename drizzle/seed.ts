@@ -2050,7 +2050,7 @@ async function seedProductVariantSupplier(db: PostgresJsDatabase<SchemaType>) {
 
   const productVariantSuppliers = [
     {
-a      variant_id: variants[0].variant_id,
+      variant_id: variants[0].variant_id,
       supplier: suppliers[0].supplier_id,
 
       supply_price: 150.25,
@@ -2082,7 +2082,6 @@ a      variant_id: variants[0].variant_id,
       lead_time_days: '30',
     },
     {
-
       variant_id: variants[4].variant_id,
       supplier: suppliers[1].supplier_id,
 
@@ -2384,7 +2383,7 @@ async function seedProductVariant(db: PostgresJsDatabase<SchemaType>) {
         Layout: 'Compact',
         Backlight: 'White',
       },
-      img_url: 'https://exam',
+      img_url: '',
     },
     {
       product_id: products[4].product_id,
@@ -2454,34 +2453,38 @@ async function seedProductVariant(db: PostgresJsDatabase<SchemaType>) {
 async function seedCategory(db: PostgresJsDatabase<SchemaType>) {
   const categoryRecords = [
     {
-      name: 'Computers & Laptops',
+      name: 'Computers and Laptops',
+      content: 'New and used laptops, desktops, and all-in-one PCs.',
+    },
+    {
+      name: 'Computer Parts',
       content:
-        'Laptops, desktops, and all-in-one PCs for all your computing needs.',
+        'Components for building, upgrading, or repairing computers, such as motherboards, processors, and graphics cards.',
     },
     {
-      name: 'Components',
-      content: 'Essential components to build or upgrade your system.',
-    },
-    {
-      name: 'Peripherals',
-      content: 'Accessories to enhance your computing experience.',
-    },
-    {
-      name: 'Networking',
-      content: 'Devices to ensure seamless connectivity and networking.',
-    },
-    {
-      name: 'Accessories',
+      name: 'Peripherals and Accessories',
       content:
-        'Supporting products like laptop bags, docking stations, and stands.',
+        'Keyboards, mice, monitors, cables, and other essential accessories.',
     },
     {
-      name: 'Software',
-      content: 'Operating systems, productivity tools, and security software.',
+      name: 'Repair Services',
+      content:
+        'Hardware repairs, software troubleshooting, and diagnostics for computers and peripherals.',
     },
     {
-      name: 'Others',
-      content: 'Miscellaneous items like refurbished products and warranties.',
+      name: 'Maintenance Services',
+      content:
+        'PC cleaning, thermal paste application, and general upkeep services.',
+    },
+    {
+      name: 'Refurbished and Trade-Ins',
+      content:
+        'Pre-owned and refurbished products, as well as trade-in options for old devices.',
+    },
+    {
+      name: 'Gaming Equipment',
+      content:
+        'High-performance components and accessories tailored for gamers.',
     },
   ];
 
