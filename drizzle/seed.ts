@@ -1812,71 +1812,33 @@ async function seedJobOrderTypes(db: PostgresJsDatabase<SchemaType>) {
   // Hardcoded realistic data for job order types
   const jobordertypesRecords = [
     {
-      name: 'Routine Maintenance',
-      description: 'Scheduled maintenance to ensure optimal performance.',
+      name: 'Cleaning Service',
+      description:
+        'Comprehensive cleaning and scheduled maintenance to ensure the equipment operates at optimal performance.',
       joborder_types_status: faker.helpers.arrayElement(statuses),
       created_at: faker.date.recent(),
       last_updated: faker.date.recent(),
     },
     {
-      name: 'Emergency Repair',
-      description: 'Urgent repair services for immediate issues.',
+      name: 'Repair Service',
+      description:
+        'Efficient and reliable repair services for resolving urgent and unexpected equipment issues.',
       joborder_types_status: faker.helpers.arrayElement(statuses),
       created_at: faker.date.recent(),
       last_updated: faker.date.recent(),
     },
     {
-      name: 'Installation Service',
-      description: 'Professional installation services for new equipment.',
+      name: 'Replacement Service',
+      description:
+        'Seamless replacement and professional installation of new or upgraded equipment.',
       joborder_types_status: faker.helpers.arrayElement(statuses),
       created_at: faker.date.recent(),
       last_updated: faker.date.recent(),
     },
     {
-      name: 'Consultation',
-      description: 'Expert consultation services for project planning.',
-      joborder_types_status: faker.helpers.arrayElement(statuses),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: 'Product Warranty Service',
-      description: 'Service offered under product warranty agreements.',
-      joborder_types_status: faker.helpers.arrayElement(statuses),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: 'Upgrades and Modifications',
-      description: 'Enhancements to existing systems and processes.',
-      joborder_types_status: faker.helpers.arrayElement(statuses),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: 'Routine Inspection',
-      description: 'Regular inspection services to ensure compliance.',
-      joborder_types_status: faker.helpers.arrayElement(statuses),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: 'Special Request Service',
-      description: 'Custom services based on specific client requests.',
-      joborder_types_status: faker.helpers.arrayElement(statuses),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: 'Training Service',
-      description: 'Training and support services for staff.',
-      joborder_types_status: faker.helpers.arrayElement(statuses),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: 'Follow-Up Service',
-      description: 'Post-service follow-up to ensure satisfaction.',
+      name: 'Upgrade Service',
+      description:
+        'Tailored upgrade services for enhancing equipment performance and integrating advanced features.',
       joborder_types_status: faker.helpers.arrayElement(statuses),
       created_at: faker.date.recent(),
       last_updated: faker.date.recent(),
@@ -2801,7 +2763,7 @@ async function main() {
     // await seedReserve(db);
 
     // // Job Order and related data
-    // await seedJobOrderTypes(db);
+    await seedJobOrderTypes(db);
     // await seedJobOrder(db);
     // await seedJobOrderServices(db);
 
