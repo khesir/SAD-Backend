@@ -2463,61 +2463,25 @@ async function seedProductDetails(db: PostgresJsDatabase<SchemaType>) {
 async function seedCategory(db: PostgresJsDatabase<SchemaType>) {
   const categoryRecords = [
     {
-      name: faker.commerce.productName(),
+      name: 'Pheriperals',
       content: faker.lorem.sentence(),
       created_at: faker.date.recent(),
       last_updated: faker.date.recent(),
     },
     {
-      name: faker.commerce.productName(),
+      name: 'Components',
       content: faker.lorem.sentence(),
       created_at: faker.date.recent(),
       last_updated: faker.date.recent(),
     },
     {
-      name: faker.commerce.productName(),
+      name: 'Misc',
       content: faker.lorem.sentence(),
       created_at: faker.date.recent(),
       last_updated: faker.date.recent(),
     },
     {
-      name: faker.commerce.productName(),
-      content: faker.lorem.sentence(),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: faker.commerce.productName(),
-      content: faker.lorem.sentence(),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: faker.commerce.productName(),
-      content: faker.lorem.sentence(),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: faker.commerce.productName(),
-      content: faker.lorem.sentence(),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: faker.commerce.productName(),
-      content: faker.lorem.sentence(),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: faker.commerce.productName(),
-      content: faker.lorem.sentence(),
-      created_at: faker.date.recent(),
-      last_updated: faker.date.recent(),
-    },
-    {
-      name: faker.commerce.productName(),
+      name: 'Parts',
       content: faker.lorem.sentence(),
       created_at: faker.date.recent(),
       last_updated: faker.date.recent(),
