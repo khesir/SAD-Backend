@@ -216,6 +216,7 @@ async function seedEmployeePosition(db: PostgresJsDatabase<SchemaType>) {
   ];
 
   await db.insert(position).values(employeePosition);
+  log.info(' Employee Position seeded successfully');
 }
 
 async function seedPersonalInformation(db: PostgresJsDatabase<SchemaType>) {
@@ -1441,7 +1442,7 @@ async function seedBorrowItem(db: PostgresJsDatabase<SchemaType>) {
       last_updated: faker.date.recent(),
     },
     {
-      cproduct_id: faker.helpers.arrayElement(productIDs).product_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       borrow_id: faker.helpers.arrayElement(borrowIDs).borrow_id,
       borrow_date: faker.date.past().toISOString(),
       return_date: faker.date.future().toISOString(),
@@ -2167,6 +2168,7 @@ async function seedProductRecord(db: PostgresJsDatabase<SchemaType>) {
   const productrecordRecords = [
     {
       product_id: faker.helpers.arrayElement(productIDs).product_id,
+      record_name: faker.company.name(),
       quantity: 10,
       record_type: faker.helpers.arrayElement(statuses),
       record_status: 'Available',
@@ -2176,6 +2178,7 @@ async function seedProductRecord(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       product_id: faker.helpers.arrayElement(productIDs).product_id,
+      record_name: faker.company.name(),
       quantity: 5,
       record_type: faker.helpers.arrayElement(statuses),
       record_status: 'Reserved',
@@ -2185,6 +2188,7 @@ async function seedProductRecord(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       product_id: faker.helpers.arrayElement(productIDs).product_id,
+      record_name: faker.company.name(),
       quantity: 2,
       record_type: faker.helpers.arrayElement(statuses),
       record_status: 'Under Repair',
@@ -2194,6 +2198,7 @@ async function seedProductRecord(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       product_id: faker.helpers.arrayElement(productIDs).product_id,
+      record_name: faker.company.name(),
       quantity: 8,
       record_type: faker.helpers.arrayElement(statuses),
       record_status: 'Sold Out',
@@ -2203,6 +2208,7 @@ async function seedProductRecord(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       product_id: faker.helpers.arrayElement(productIDs).product_id,
+      record_name: faker.company.name(),
       quantity: 3,
       record_type: faker.helpers.arrayElement(statuses),
       record_status: 'Available',
@@ -2235,8 +2241,7 @@ async function seedProduct(db: PostgresJsDatabase<SchemaType>) {
   const productsRecords = [
     {
       supplier_id: faker.helpers.arrayElement(supplierIDs).supplier_id,
-      product_det_id:
-        faker.helpers.arrayElement(product_detailsIDs).p_details_id,
+      p_details_id: faker.helpers.arrayElement(product_detailsIDs).p_details_id,
       price: 100,
       discount: 12,
       is_serialize: true,
@@ -2246,8 +2251,7 @@ async function seedProduct(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       supplier_id: faker.helpers.arrayElement(supplierIDs).supplier_id,
-      product_det_id:
-        faker.helpers.arrayElement(product_detailsIDs).p_details_id,
+      p_details_id: faker.helpers.arrayElement(product_detailsIDs).p_details_id,
       price: 100,
       discount: 12,
       is_serialize: true,
@@ -2257,8 +2261,7 @@ async function seedProduct(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       supplier_id: faker.helpers.arrayElement(supplierIDs).supplier_id,
-      product_det_id:
-        faker.helpers.arrayElement(product_detailsIDs).p_details_id,
+      p_details_id: faker.helpers.arrayElement(product_detailsIDs).p_details_id,
       price: 100,
       discount: 12,
       is_serialize: false,
@@ -2268,8 +2271,7 @@ async function seedProduct(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       supplier_id: faker.helpers.arrayElement(supplierIDs).supplier_id,
-      product_det_id:
-        faker.helpers.arrayElement(product_detailsIDs).p_details_id,
+      p_details_id: faker.helpers.arrayElement(product_detailsIDs).p_details_id,
       price: 100,
       discount: 12,
       is_serialize: true,
@@ -2279,8 +2281,7 @@ async function seedProduct(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       supplier_id: faker.helpers.arrayElement(supplierIDs).supplier_id,
-      product_det_id:
-        faker.helpers.arrayElement(product_detailsIDs).p_details_id,
+      p_details_id: faker.helpers.arrayElement(product_detailsIDs).p_details_id,
       price: 100,
       discount: 12,
       is_serialize: false,
@@ -2290,8 +2291,7 @@ async function seedProduct(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       supplier_id: faker.helpers.arrayElement(supplierIDs).supplier_id,
-      product_det_id:
-        faker.helpers.arrayElement(product_detailsIDs).p_details_id,
+      p_details_id: faker.helpers.arrayElement(product_detailsIDs).p_details_id,
       price: 100,
       discount: 12,
       is_serialize: true,
@@ -2301,8 +2301,7 @@ async function seedProduct(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       supplier_id: faker.helpers.arrayElement(supplierIDs).supplier_id,
-      product_det_id:
-        faker.helpers.arrayElement(product_detailsIDs).p_details_id,
+      p_details_id: faker.helpers.arrayElement(product_detailsIDs).p_details_id,
       price: 100,
       discount: 12,
       is_serialize: false,
@@ -2312,8 +2311,7 @@ async function seedProduct(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       supplier_id: faker.helpers.arrayElement(supplierIDs).supplier_id,
-      product_det_id:
-        faker.helpers.arrayElement(product_detailsIDs).p_details_id,
+      p_details_id: faker.helpers.arrayElement(product_detailsIDs).p_details_id,
       price: 100,
       discount: 12,
       is_serialize: true,
@@ -2323,8 +2321,7 @@ async function seedProduct(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       supplier_id: faker.helpers.arrayElement(supplierIDs).supplier_id,
-      product_det_id:
-        faker.helpers.arrayElement(product_detailsIDs).p_details_id,
+      p_details_id: faker.helpers.arrayElement(product_detailsIDs).p_details_id,
       price: 100,
       discount: 12,
       is_serialize: false,
@@ -2334,8 +2331,7 @@ async function seedProduct(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       supplier_id: faker.helpers.arrayElement(supplierIDs).supplier_id,
-      product_det_id:
-        faker.helpers.arrayElement(product_detailsIDs).p_details_id,
+      p_details_id: faker.helpers.arrayElement(product_detailsIDs).p_details_id,
       price: 100,
       discount: 12,
       is_serialize: true,
@@ -2787,10 +2783,12 @@ async function seedOrder(db: PostgresJsDatabase<SchemaType>) {
 }
 async function seedOrderItems(db: PostgresJsDatabase<SchemaType>) {
   const orderIDs = await db.select().from(order);
+  const productIDs = await db.select().from(product);
 
   const orderitemsRecords = [
     {
       order_id: faker.helpers.arrayElement(orderIDs).order_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       quantity: 2,
       price: '59999.99',
       status: 'Shipped',
@@ -2799,6 +2797,7 @@ async function seedOrderItems(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       order_id: faker.helpers.arrayElement(orderIDs).order_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       quantity: 1,
       price: '12999.5',
       status: 'Processing',
@@ -2807,6 +2806,7 @@ async function seedOrderItems(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       order_id: faker.helpers.arrayElement(orderIDs).order_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       quantity: 3,
       price: '1499.75',
       status: 'Delivered',
@@ -2815,6 +2815,7 @@ async function seedOrderItems(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       order_id: faker.helpers.arrayElement(orderIDs).order_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       quantity: 5,
       price: '249.99',
       status: 'Cancelled',
@@ -2823,6 +2824,7 @@ async function seedOrderItems(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       order_id: faker.helpers.arrayElement(orderIDs).order_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       quantity: 1,
       price: '7999.99',
       status: 'Pending',
@@ -2831,6 +2833,7 @@ async function seedOrderItems(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       order_id: faker.helpers.arrayElement(orderIDs).order_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       quantity: 2,
       price: '999.99',
       status: 'Processing',
@@ -2839,6 +2842,7 @@ async function seedOrderItems(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       order_id: faker.helpers.arrayElement(orderIDs).order_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       quantity: 4,
       price: '3499.0',
       status: 'Delivered',
@@ -2847,6 +2851,7 @@ async function seedOrderItems(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       order_id: faker.helpers.arrayElement(orderIDs).order_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       quantity: 1,
       price: '55999.99',
       status: 'Shipped',
@@ -2855,6 +2860,7 @@ async function seedOrderItems(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       order_id: faker.helpers.arrayElement(orderIDs).order_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       quantity: 3,
       price: '1199.5',
       status: 'Pending',
@@ -2863,6 +2869,7 @@ async function seedOrderItems(db: PostgresJsDatabase<SchemaType>) {
     },
     {
       order_id: faker.helpers.arrayElement(orderIDs).order_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       quantity: 2,
       price: '2099.99',
       status: 'Delivered',
@@ -2896,63 +2903,63 @@ async function seedSerializedItems(db: PostgresJsDatabase<SchemaType>) {
       last_updated: new Date('2023-01-10'),
     },
     {
-      product__id: faker.helpers.arrayElement(productIDs).product_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       serial_number: faker.string.uuid(),
       status: faker.helpers.arrayElement(statuses),
       created_at: new Date('2023-01-01'),
       last_updated: new Date('2023-01-10'),
     },
     {
-      product__id: faker.helpers.arrayElement(productIDs).product_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       serial_number: faker.string.uuid(),
       status: faker.helpers.arrayElement(statuses),
       created_at: new Date('2023-01-01'),
       last_updated: new Date('2023-01-10'),
     },
     {
-      product__id: faker.helpers.arrayElement(productIDs).product_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       serial_number: faker.string.uuid(),
       status: faker.helpers.arrayElement(statuses),
       created_at: new Date('2023-01-01'),
       last_updated: new Date('2023-01-10'),
     },
     {
-      product__id: faker.helpers.arrayElement(productIDs).product_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       serial_number: faker.string.uuid(),
       status: faker.helpers.arrayElement(statuses),
       created_at: new Date('2023-01-01'),
       last_updated: new Date('2023-01-10'),
     },
     {
-      product__id: faker.helpers.arrayElement(productIDs).product_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       serial_number: faker.string.uuid(),
       status: faker.helpers.arrayElement(statuses),
       created_at: new Date('2023-01-01'),
       last_updated: new Date('2023-01-10'),
     },
     {
-      product__id: faker.helpers.arrayElement(productIDs).product_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       serial_number: faker.string.uuid(),
       status: faker.helpers.arrayElement(statuses),
       created_at: new Date('2023-01-01'),
       last_updated: new Date('2023-01-10'),
     },
     {
-      product__id: faker.helpers.arrayElement(productIDs).product_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       serial_number: faker.string.uuid(),
       status: faker.helpers.arrayElement(statuses),
       created_at: new Date('2023-01-01'),
       last_updated: new Date('2023-01-10'),
     },
     {
-      product__id: faker.helpers.arrayElement(productIDs).product_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       serial_number: faker.string.uuid(),
       status: faker.helpers.arrayElement(statuses),
       created_at: new Date('2023-01-01'),
       last_updated: new Date('2023-01-10'),
     },
     {
-      product__id: faker.helpers.arrayElement(productIDs).product_id,
+      product_id: faker.helpers.arrayElement(productIDs).product_id,
       serial_number: faker.string.uuid(),
       status: faker.helpers.arrayElement(statuses),
       created_at: new Date('2023-01-01'),
@@ -3135,13 +3142,14 @@ async function seedDiscountProducts(db: PostgresJsDatabase<SchemaType>) {
 async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
   const customerIDs = await db.select().from(customer);
   const customergroupIDs = await db.select().from(customerGroup);
+  const discountIDs = await db.select().from(discount);
 
   const discountcustomerRecords = [
     {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },
@@ -3149,7 +3157,7 @@ async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },
@@ -3157,7 +3165,7 @@ async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },
@@ -3165,7 +3173,7 @@ async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },
@@ -3173,7 +3181,7 @@ async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },
@@ -3181,7 +3189,7 @@ async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },
@@ -3189,7 +3197,7 @@ async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },
@@ -3197,7 +3205,7 @@ async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },
@@ -3205,7 +3213,7 @@ async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },
@@ -3213,7 +3221,7 @@ async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },
@@ -3221,7 +3229,7 @@ async function seedDiscountCustomer(db: PostgresJsDatabase<SchemaType>) {
       customer_id: faker.helpers.arrayElement(customerIDs).customer_id,
       customer_group_id:
         faker.helpers.arrayElement(customergroupIDs).customer_group_id,
-
+      discount_id: faker.helpers.arrayElement(discountIDs).discount_id,
       created_at: new Date('2024-01-15T10:30:00Z'),
       last_updated: new Date('2024-01-15T10:30:00Z'),
     },

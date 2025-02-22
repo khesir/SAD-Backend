@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS "customer" (
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "customer_group" (
 	"customer_group_id" serial PRIMARY KEY NOT NULL,
-	"name" varchar(255),
+	"name" varchar,
 	"created_at" timestamp DEFAULT now(),
 	"last_updated" timestamp DEFAULT now() NOT NULL,
 	"deleted_at" timestamp
@@ -354,7 +354,7 @@ CREATE TABLE IF NOT EXISTS "product_record" (
 	"product_record_id" serial PRIMARY KEY NOT NULL,
 	"product_id" integer,
 	"record_name" varchar(255),
-	"qty" integer DEFAULT 0,
+	"qty" integer,
 	"record_type" "record_type" NOT NULL,
 	"status" varchar,
 	"created_at" timestamp DEFAULT now(),
@@ -374,11 +374,11 @@ CREATE TABLE IF NOT EXISTS "serialized_products" (
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "supplier" (
 	"supplier_id" serial PRIMARY KEY NOT NULL,
-	"name" varchar(255),
+	"company_name" varchar(255),
 	"contact_number" varchar(255),
 	"remarks" varchar(255),
 	"relationship" "supplierRelation_Status",
-	"remark" varchar,
+	"profile_link" varchar,
 	"created_at" timestamp DEFAULT now(),
 	"last_updated" timestamp DEFAULT now() NOT NULL,
 	"deleted_at" timestamp

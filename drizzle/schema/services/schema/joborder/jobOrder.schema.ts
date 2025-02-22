@@ -24,7 +24,7 @@ export const jobOrderStatusEnum = pgEnum('joborder_status', [
 
 export const jobOrder = pgTable('job_order', {
   job_order_id: serial('job_order_id').primaryKey(),
-  job_order_type_id: integer('joborder_type_id').references(
+  joborder_type_id: integer('joborder_type_id').references(
     () => jobOrderType.joborder_type_id,
   ),
   customer_id: integer('customer_id').references(() => customer.customer_id),

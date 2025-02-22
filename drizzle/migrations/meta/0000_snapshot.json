@@ -1,5 +1,5 @@
 {
-  "id": "bdff2c05-a285-479c-a2ea-96aceada77e1",
+  "id": "ac8e6ca0-6a0e-490a-ab71-75ac987bf122",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -134,7 +134,7 @@
         },
         "name": {
           "name": "name",
-          "type": "varchar(255)",
+          "type": "varchar",
           "primaryKey": false,
           "notNull": false
         },
@@ -1569,8 +1569,7 @@
           "name": "qty",
           "type": "integer",
           "primaryKey": false,
-          "notNull": false,
-          "default": 0
+          "notNull": false
         },
         "record_type": {
           "name": "record_type",
@@ -1704,8 +1703,8 @@
           "primaryKey": true,
           "notNull": true
         },
-        "name": {
-          "name": "name",
+        "company_name": {
+          "name": "company_name",
           "type": "varchar(255)",
           "primaryKey": false,
           "notNull": false
@@ -1729,8 +1728,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "remark": {
-          "name": "remark",
+        "profile_link": {
+          "name": "profile_link",
           "type": "varchar",
           "primaryKey": false,
           "notNull": false
