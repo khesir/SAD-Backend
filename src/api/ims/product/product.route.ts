@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { validateRequest } from '@/src/middlewares';
-import { db } from '@/drizzle/pool';
+import { validateRequest } from '../../../../src/middlewares';
+import { db } from '../../../../drizzle/pool';
 import { ProductController } from './product.controller';
 import {
   formDataToObject,

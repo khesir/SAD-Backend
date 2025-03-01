@@ -1,7 +1,7 @@
-import { HttpStatus } from '@/lib/HttpStatus';
+import { HttpStatus } from '../../../../../lib/HttpStatus';
 import { Request, Response, NextFunction } from 'express';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { SchemaType } from '@/drizzle/schema/type';
+import { SchemaType } from '../../../../../drizzle/schema/type';
 import { DiscountCustomerService } from './discountcustomer.service';
 
 export class DiscountCustomerController {

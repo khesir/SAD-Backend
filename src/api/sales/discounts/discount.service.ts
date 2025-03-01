@@ -1,7 +1,7 @@
 import { and, eq, isNull, sql, desc, asc } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { SchemaType } from '@/drizzle/schema/type';
-import { discount } from '@/drizzle/schema/ims';
+import { SchemaType } from '../../../../drizzle/schema/type';
+import { discount } from '../../../../drizzle/schema/ims';
 import { CreateDiscount } from './discount.model';
 
 export class DiscountService {

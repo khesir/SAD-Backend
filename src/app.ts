@@ -1,6 +1,4 @@
-import express from 'express';
 import dotenv from 'dotenv';
-import cors from 'cors';
 
 import log from '../lib/logger';
 
@@ -11,11 +9,11 @@ import authRoute from './auth/auth.route';
 import baseRoute from './api';
 import * as middlewares from './middlewares';
 
-dotenv.config();
-const app = express();
+import createServer from './utils/server';
 
-app.use(cors({ origin: '*' }));
-app.use(express.json());
+const app = createServer();
+
+dotenv.config();
 
 app.use('/auth', authRoute);
 

@@ -1,8 +1,8 @@
 import { and, eq, isNull, sql, desc, asc, like, or } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateCustomer } from './customer.model';
-import { customer } from '@/drizzle/schema/customer';
-import { SchemaType } from '@/drizzle/schema/type';
+import { customer } from '../../../../drizzle/schema/customer';
+import { SchemaType } from '../../../../drizzle/schema/type';
 
 export class CustomerService {
   private db: PostgresJsDatabase<SchemaType>;
@@ -13,6 +13,7 @@ export class CustomerService {
 
   async createCustomer(data: CreateCustomer) {
     await this.db.insert(customer).values(data);
+    return data;
   }
 
   async getAllCustomer(

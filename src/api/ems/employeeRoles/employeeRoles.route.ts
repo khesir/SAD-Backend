@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { db } from '@/drizzle/pool';
-import { validateRequest } from '@/src/middlewares';
+import { db } from '../../../../drizzle/pool';
+import { validateRequest } from '../../../../src/middlewares';
 import { EmployeeRolesController } from './employeeRoles.controller';
 import {
   formDataToObject,

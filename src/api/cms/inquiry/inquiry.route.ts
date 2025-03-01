@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { db } from '@/drizzle/pool';
-import log from '@/lib/logger';
-import { validateRequest } from '@/src/middlewares';
+import { db } from '../../../../drizzle/pool';
+import log from '../../../../lib/logger';
+import { validateRequest } from '../../../../src/middlewares';
 import { InquiryController } from './inquiry.controller';
 import { validateInquiryID } from './inquiry.middleware';
 import { CreateInquiry, UpdateInquiry } from './inquiry.model';

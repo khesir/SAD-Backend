@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/index.ts",
     "start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/src/index.js",
-    "test": "jest",
+    "test": "jest --config jest.config.ts",
     "build": "tsc",
     "db:migrate:reset": "npx supabase db reset && npx drizzle-kit migrate && tsx ./drizzle/seed.ts",
     "db:migrate:seed": "npx drizzle-kit migrate && tsx ./drizzle/seed.ts",
@@ -36,9 +36,10 @@
     "@types/cors": "2.8.17",
     "@types/eslint__js": "8.42.3",
     "@types/express": "4.17.21",
-    "@types/jest": "29.5.12",
+    "@types/jest": "^29.5.12",
     "@types/multer": "^1.4.12",
     "@types/mysql": "2.15.26",
+    "@types/node": "^22.13.8",
     "@types/supertest": "6.0.2",
     "@types/swagger-jsdoc": "6.0.4",
     "@types/swagger-ui-express": "4.1.6",
@@ -50,12 +51,12 @@
     "eslint-plugin-prettier": "5.2.1",
     "globals": "15.9.0",
     "husky": "8.0.0",
-    "jest": "29.7.0",
+    "jest": "^29.7.0",
     "lint-staged": "15.2.9",
     "nodemon": "3.1.4",
     "prettier": "3.3.3",
-    "supertest": "7.0.0",
-    "ts-jest": "29.2.5",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
     "ts-node": "10.9.2",
     "typescript-eslint": "8.3.0"
   },
@@ -81,23 +82,5 @@
     "tsconfig-paths": "4.2.0",
     "tsx": "4.19.0",
     "zod": "3.23.8"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "ts"
-    ],
-    "rootDir": ".",
-    "testRegex": ".*\\.test\\.ts$",
-    "transform": {
-      ".+\\.(t|j)s$": "ts-jest"
-    },
-    "collectCoverageFrom": [
-      "**/*.(t|j)s"
-    ],
-    "coverageDirectory": "../coverage",
-    "testEnvironment": "node",
-    "forceExit": true
   }
 }

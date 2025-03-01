@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { validateRequest } from '@/src/middlewares';
-import { db } from '@/drizzle/pool';
+import { validateRequest } from '../../../../../../src/middlewares';
+import { db } from '../../../../../../drizzle/pool';
 import { RemarkTicketsController } from './remarkticket.controller';
 import { CreateRemarkTickets, UpdateRemarkTickets } from './remarkticket.model';
 import { validateRemarkTicketsID } from './remarkticket.middleware';

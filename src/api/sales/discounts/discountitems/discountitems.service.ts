@@ -1,12 +1,12 @@
 import { and, eq, isNull, asc, desc, sql } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { SchemaType } from '@/drizzle/schema/type';
+import { SchemaType } from '../../../../../drizzle/schema/type';
 import {
   category,
   discount,
   discountProducts,
   product,
-} from '@/drizzle/schema/ims';
+} from '../../../../../drizzle/schema/ims';
 
 export class DiscountItemService {
   private db: PostgresJsDatabase<SchemaType>;

@@ -5,8 +5,8 @@ import {
   UpdateOrderItem,
   UpdateStatus,
 } from './orderitem.model';
-import { order, orderItem, product } from '@/drizzle/schema/ims';
-import { SchemaType } from '@/drizzle/schema/type';
+import { order, orderItem, product } from '../../../../../drizzle/schema/ims';
+import { SchemaType } from '../../../../../drizzle/schema/type';
 
 export class OrderItemService {
   private db: PostgresJsDatabase<SchemaType>;

@@ -4,8 +4,8 @@ import { DepartmentController } from './department.controller';
 import { CreateDepartment, UpdateDepartment } from './department.model';
 import { validateDepartmentID } from './department.middleware';
 
-import { validateRequest } from '@/src/middlewares';
-import { db } from '@/drizzle/pool';
+import { validateRequest } from '../../../../src/middlewares';
+import { db } from '../../../../drizzle/pool';
 
 const departmentRoute = Router({ mergeParams: true });
 const departmentController = new DepartmentController(db);

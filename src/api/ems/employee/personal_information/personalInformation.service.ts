@@ -1,8 +1,8 @@
 import { eq, isNull, and } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js/driver';
 import { PersonalInformation } from './personalInformation.model';
-import { SchemaType } from '@/drizzle/schema/type';
-import { personalInformation } from '@/drizzle/schema/ems';
+import { SchemaType } from '../../../../../drizzle/schema/type';
+import { personalInformation } from '../../../../../drizzle/schema/ems';
 
 export class PersonalInformationService {
   private db: PostgresJsDatabase<SchemaType>;

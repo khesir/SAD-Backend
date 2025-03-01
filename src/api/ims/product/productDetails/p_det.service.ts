@@ -1,7 +1,7 @@
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { isNull, eq, sql, and, asc, desc } from 'drizzle-orm';
-import { SchemaType } from '@/drizzle/schema/type';
-import { category, productDetails } from '@/drizzle/schema/ims';
+import { SchemaType } from '../../../../../drizzle/schema/type';
+import { category, productDetails } from '../../../../../drizzle/schema/ims';
 import { CreateProductDetails } from './p_det.model';
 
 export class ProductDetailsService {

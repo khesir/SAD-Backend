@@ -1,4 +1,4 @@
-import { employee } from '@/drizzle/schema/ems/schema/employee.schema';
+import { employee } from '../../../../../drizzle/schema/ems/schema/employee.schema';
 import {
   boolean,
   integer,

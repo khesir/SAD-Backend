@@ -1,7 +1,7 @@
 import { and, eq, isNull, sql, asc, desc } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { product, productRecord } from '@/drizzle/schema/ims';
-import { SchemaType } from '@/drizzle/schema/type';
+import { product, productRecord } from '../../../../../drizzle/schema/ims';
+import { SchemaType } from '../../../../../drizzle/schema/type';
 import { CreateProductRecord } from './productRecord.model';
 
 export class ProductRecordService {

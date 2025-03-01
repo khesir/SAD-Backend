@@ -6,7 +6,7 @@ import {
   timestamp,
   varchar,
 } from 'drizzle-orm/pg-core';
-import { customer } from '@/drizzle/schema/customer';
+import { customer } from '../../../../../drizzle/schema/customer';
 
 export const borrowStatusEnum = pgEnum('borrow_status', [
   'Borrowed',

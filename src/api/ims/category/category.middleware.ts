@@ -1,9 +1,9 @@
 import { eq, and, isNull } from 'drizzle-orm';
 import { NextFunction, Request, Response } from 'express';
 
-import log from '@/lib/logger';
-import { db } from '@/drizzle/pool';
-import { category } from '@/drizzle/schema/ims/schema/product/category.schema';
+import log from '../../../../lib/logger';
+import { db } from '../../../../drizzle/pool';
+import { category } from '../../../../drizzle/schema/ims/schema/product/category.schema';
 
 // There's a globally used
 // middleware like error handling and schema validation

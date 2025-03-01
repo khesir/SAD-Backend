@@ -2,9 +2,9 @@ import { eq, and, isNull } from 'drizzle-orm';
 import { NextFunction, Request, Response } from 'express';
 import multer from 'multer';
 
-import log from '@/lib/logger';
-import { db } from '@/drizzle/pool';
-import { employee, employeeRoles } from '@/drizzle/schema/ems';
+import log from '../../../../lib/logger';
+import { db } from '../../../../drizzle/pool';
+import { employee, employeeRoles } from '../../../../drizzle/schema/ems';
 
 // There's a globally used
 // middleware like error handling and schema validation

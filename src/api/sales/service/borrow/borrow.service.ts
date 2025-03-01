@@ -1,9 +1,9 @@
 import { and, eq, isNull, sql, desc, asc } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateBorrow } from './borrow.model';
-import { customer } from '@/drizzle/schema/customer';
-import { borrow } from '@/drizzle/schema/services';
-import { SchemaType } from '@/drizzle/schema/type';
+import { customer } from '../../../../../drizzle/schema/customer';
+import { borrow } from '../../../../../drizzle/schema/services';
+import { SchemaType } from '../../../../../drizzle/schema/type';
 
 export class BorrowService {
   private db: PostgresJsDatabase<SchemaType>;

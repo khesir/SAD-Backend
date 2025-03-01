@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { HttpStatus } from '@/lib/HttpStatus';
+import { HttpStatus } from '../../../../lib/HttpStatus';
 import { OrderService } from './order.service';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { SchemaType } from '@/drizzle/schema/type';
+import { SchemaType } from '../../../../drizzle/schema/type';
 
 export class OrderController {
   private orderService: OrderService;

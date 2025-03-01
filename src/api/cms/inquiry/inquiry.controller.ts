@@ -1,8 +1,8 @@
-import { HttpStatus } from '@/lib/HttpStatus';
+import { HttpStatus } from '../../../../lib/HttpStatus';
 import { Request, Response, NextFunction } from 'express';
 import { InquiryService } from './inquiry.service';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { SchemaType } from '@/drizzle/schema/type';
+import { SchemaType } from '../../../../drizzle/schema/type';
 
 export class InquiryController {
   private inquiryService: InquiryService;

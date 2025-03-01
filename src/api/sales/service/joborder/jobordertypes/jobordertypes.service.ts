@@ -1,8 +1,8 @@
 import { eq, isNull } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateJobOrderTypes } from './jobordertypes.model';
-import { jobOrderType } from '@/drizzle/schema/services';
-import { SchemaType } from '@/drizzle/schema/type';
+import { jobOrderType } from '../../../../../../drizzle/schema/services';
+import { SchemaType } from '../../../../../../drizzle/schema/type';
 
 export class JobOrderTypeService {
   private db: PostgresJsDatabase<SchemaType>;

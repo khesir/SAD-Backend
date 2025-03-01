@@ -1,5 +1,5 @@
-import { category } from '@/drizzle/schema/ims';
-import { SchemaType } from '@/drizzle/schema/type';
+import { category } from '../../../../drizzle/schema/ims';
+import { SchemaType } from '../../../../drizzle/schema/type';
 import { eq, isNull, sql } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 

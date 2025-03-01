@@ -1,7 +1,7 @@
 import { and, eq, isNull, sql, asc, SQL, inArray } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { SupabaseService } from '@/supabase/supabase.service';
-import { SchemaType } from '@/drizzle/schema/type';
+import { SupabaseService } from '../../../../supabase/supabase.service';
+import { SchemaType } from '../../../../drizzle/schema/type';
 import { CreateProduct } from './product.model';
 import {
   productDetails,
@@ -12,9 +12,9 @@ import {
   serializeProduct,
   orderItem,
   order,
-} from '@/drizzle/schema/ims';
-import { productCategory } from '@/drizzle/schema/ims/schema/product/productCategory.schema';
-import { productSupplier } from '@/drizzle/schema/ims/schema/product/productSupplier.schema';
+} from '../../../../drizzle/schema/ims';
+import { productCategory } from '../../../../drizzle/schema/ims/schema/product/productCategory.schema';
+import { productSupplier } from '../../../../drizzle/schema/ims/schema/product/productSupplier.schema';
 
 export class ProductService {
   private db: PostgresJsDatabase<SchemaType>;

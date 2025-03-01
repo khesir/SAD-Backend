@@ -1,8 +1,8 @@
-import { HttpStatus } from '@/lib/HttpStatus';
+import { HttpStatus } from '../../../../../../lib/HttpStatus';
 import { Request, Response, NextFunction } from 'express';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { RemarkTicketsService } from './remarkticket.service';
-import { SchemaType } from '@/drizzle/schema/type';
+import { SchemaType } from '../../../../../../drizzle/schema/type';
 
 export class RemarkTicketsController {
   private remarkticketService: RemarkTicketsService;

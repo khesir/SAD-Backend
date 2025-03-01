@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { validateRequest } from '@/src/middlewares';
-import { db } from '@/drizzle/pool';
-import log from '@/lib/logger';
+import { validateRequest } from '../../../../../../src/middlewares';
+import { db } from '../../../../../../drizzle/pool';
+import log from '../../../../../../lib/logger';
 import { RemarkTypesController } from './remarktype.controller';
 import { validateRemarkTypeID } from './remarktype.middleware';
 import { CreateRemarkType, UpdateRemarkType } from './remarktype.model';

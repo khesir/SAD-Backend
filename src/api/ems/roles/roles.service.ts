@@ -1,8 +1,8 @@
 import { eq, isNull } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateEmployeeRole } from './roles.model';
-import { roles } from '@/drizzle/schema/ems';
-import { SchemaType } from '@/drizzle/schema/type';
+import { roles } from '../../../../drizzle/schema/ems';
+import { SchemaType } from '../../../../drizzle/schema/type';
 
 export class EmployeeRoleService {
   private db: PostgresJsDatabase<SchemaType>;

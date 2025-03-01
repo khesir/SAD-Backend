@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { validateRequest } from '@/src/middlewares';
+import { validateRequest } from '../../../../../src/middlewares';
 import { PersonalInformationController } from './personalInformation.controller';
 import { PersonalInformation } from './personalInformation.model';
 import {
   validateEmployeeId,
   validatePersonalId,
 } from './personalInformation.middlewares';
-import { db } from '@/drizzle/pool';
+import { db } from '../../../../../drizzle/pool';
 
 const personalInformationRoute = Router({ mergeParams: true });
 const controller = new PersonalInformationController(db);

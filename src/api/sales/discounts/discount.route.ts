@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { db } from '@/drizzle/pool';
-import log from '@/lib/logger';
-import { validateRequest } from '@/src/middlewares';
+import { db } from '../../../../drizzle/pool';
+import log from '../../../../lib/logger';
+import { validateRequest } from '../../../../src/middlewares';
 import { DiscountController } from './discount.controller';
 import { validateDiscountID } from './discount.middleware';
 import { CreateDiscount, UpdateDiscount } from './discount.model';

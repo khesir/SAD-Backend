@@ -7,7 +7,7 @@ import {
   timestamp,
 } from 'drizzle-orm/pg-core';
 import { borrow } from './borrow.schema';
-import { product } from '@/drizzle/schema/ims';
+import { product } from '../../../../../drizzle/schema/ims';
 
 export const borrowItemStatusEnum = pgEnum('borrowStatusEnum', [
   'Requested',

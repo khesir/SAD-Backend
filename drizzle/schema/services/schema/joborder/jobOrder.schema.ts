@@ -8,7 +8,7 @@ import {
   varchar,
 } from 'drizzle-orm/pg-core';
 import { jobOrderType } from './jobOrderType.schema';
-import { customer } from '@/drizzle/schema/customer';
+import { customer } from '../../../../../drizzle/schema/customer';
 
 export const jobOrderStatusEnum = pgEnum('joborder_status', [
   'Pending',

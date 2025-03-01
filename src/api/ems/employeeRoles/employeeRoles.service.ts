@@ -16,7 +16,7 @@ import {
   Status,
   UpdateEmployeeRoles,
 } from './employeeRoles.model';
-import { SupabaseService } from '@/supabase/supabase.service';
+import { SupabaseService } from '../../../../supabase/supabase.service';
 import { CreateEmployee } from '../employee/employee/employee.model';
 import { PersonalInformation } from '../employee/personal_information/personalInformation.model';
 import { EmploymentInformation } from '../employee/employmentInformation/employmentInformation.model';
@@ -27,8 +27,8 @@ import {
   roles,
   position,
   employeeRoles,
-} from '@/drizzle/schema/ems';
-import { SchemaType } from '@/drizzle/schema/type';
+} from '../../../../drizzle/schema/ems';
+import { SchemaType } from '../../../../drizzle/schema/type';
 
 export class EmployeeRolesService {
   private db: PostgresJsDatabase<SchemaType>;

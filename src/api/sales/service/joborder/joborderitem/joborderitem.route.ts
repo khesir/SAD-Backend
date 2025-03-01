@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { db } from '@/drizzle/pool';
-import { validateRequest } from '@/src/middlewares';
+import { db } from '../../../../../../drizzle/pool';
+import { validateRequest } from '../../../../../../src/middlewares';
 import { JobOrderItemController } from './joborderitem.controller';
 import { validateJobOrderItemsID } from './joborderitem.middleware';
 import { CreateJobOrderItems, UpdateJobOrderItems } from './joborderitem.model';

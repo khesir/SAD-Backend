@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { validateRequest } from '@/src/middlewares';
-import { db } from '@/drizzle/pool';
+import { validateRequest } from '../../../../src/middlewares';
+import { db } from '../../../../drizzle/pool';
 import { EmployeeRoleController } from './roles.controller';
 import { validateEmployeeRoleID } from './roles.middleware';
 import { CreateEmployeeRole, UpdateEmployeeRole } from './roles.model';

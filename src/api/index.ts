@@ -1,11 +1,11 @@
 import express from 'express';
 
-import { HttpStatus } from '@/lib/config';
+import { HttpStatus } from '../../lib/config';
 
 import emsRoute from './ems/index';
 import imsRoute from './ims/inventory.route';
 
-import log from '@/lib/logger';
+import log from '../../lib/logger';
 import cmsRoute from './cms/cms.route';
 import pmsRoute from './payment/proof.route';
 import smsRoute from './sales/sales.route';

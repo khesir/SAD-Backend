@@ -1,8 +1,11 @@
 import { and, eq, isNull, asc, desc, sql } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { reserve, reserveItems } from '@/drizzle/schema/services';
-import { SchemaType } from '@/drizzle/schema/type';
-import { product } from '@/drizzle/schema/ims';
+import {
+  reserve,
+  reserveItems,
+} from '../../../../../../drizzle/schema/services';
+import { SchemaType } from '../../../../../../drizzle/schema/type';
+import { product } from '../../../../../../drizzle/schema/ims';
 import { CreateReserveItem } from './reservevItem.model';
 
 export class ReserveItemService {

@@ -1,8 +1,8 @@
-import { HttpStatus } from '@/lib/HttpStatus';
+import { HttpStatus } from '../../../../lib/HttpStatus';
 import { Request, Response, NextFunction } from 'express';
 import { CustomerService } from './customer.service';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { SchemaType } from '@/drizzle/schema/type';
+import { SchemaType } from '../../../../drizzle/schema/type';
 
 export class CustomerController {
   private customerService: CustomerService;
@@ -61,6 +61,7 @@ export class CustomerController {
     try {
       const {
         firstname,
+        middlename,
         lastname,
         contact_phone,
         socials,
@@ -74,6 +75,7 @@ export class CustomerController {
 
       await this.customerService.createCustomer({
         firstname,
+        middlename,
         lastname,
         contact_phone,
         socials,

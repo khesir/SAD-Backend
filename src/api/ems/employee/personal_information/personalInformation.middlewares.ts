@@ -1,10 +1,13 @@
 import { eq, and, isNull } from 'drizzle-orm';
 import { NextFunction, Request, Response } from 'express';
 
-import log from '@/lib/logger';
-import { HttpStatus } from '@/lib/HttpStatus';
-import { db } from '@/drizzle/pool';
-import { employee, personalInformation } from '@/drizzle/schema/ems';
+import log from '../../../../../lib/logger';
+import { HttpStatus } from '../../../../../lib/HttpStatus';
+import { db } from '../../../../../drizzle/pool';
+import {
+  employee,
+  personalInformation,
+} from '../../../../../drizzle/schema/ems';
 
 export async function validatePersonalId(
   req: Request,

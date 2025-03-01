@@ -6,7 +6,7 @@ import {
   timestamp,
 } from 'drizzle-orm/pg-core';
 import { reserve } from './reserve.schema';
-import { product } from '@/drizzle/schema/ims';
+import { product } from '../../../../../drizzle/schema/ims';
 
 export const reserveItemStatusEnum = pgEnum('reserveStatusEnum', [
   'Reserved',

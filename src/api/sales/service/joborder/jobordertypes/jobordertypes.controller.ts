@@ -1,8 +1,8 @@
-import { HttpStatus } from '@/lib/HttpStatus';
+import { HttpStatus } from '../../../../../../lib/HttpStatus';
 import { Request, Response, NextFunction } from 'express';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { JobOrderTypeService } from './jobordertypes.service';
-import { SchemaType } from '@/drizzle/schema/type';
+import { SchemaType } from '../../../../../../drizzle/schema/type';
 
 export class JobOrderTypesController {
   private jobordertypesService: JobOrderTypeService;

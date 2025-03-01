@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { validateRequest } from '@/src/middlewares';
-import { db } from '@/drizzle/pool';
-import log from '@/lib/logger';
+import { validateRequest } from '../../../../../../src/middlewares';
+import { db } from '../../../../../../drizzle/pool';
+import log from '../../../../../../lib/logger';
 import { validateJobOrderTypesID } from './jobordertypes.middleware';
 import {
   CreateJobOrderTypes,

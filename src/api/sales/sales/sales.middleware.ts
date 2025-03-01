@@ -1,9 +1,9 @@
 import { eq, and, isNull } from 'drizzle-orm';
 import { NextFunction, Request, Response } from 'express';
 
-import log from '@/lib/logger';
-import { db } from '@/drizzle/pool';
-import { sales } from '@/drizzle/schema/sales';
+import log from '../../../../lib/logger';
+import { db } from '../../../../drizzle/pool';
+import { sales } from '../../../../drizzle/schema/sales';
 
 export async function validateSalesID(
   req: Request,

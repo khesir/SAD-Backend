@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 
 import { AuthenticationService } from './auth.service';
-import { HttpStatus } from '@/lib/HttpStatus';
+import { HttpStatus } from '../../lib/HttpStatus';
 
 export class AuthenticationController {
   private authService: AuthenticationService;

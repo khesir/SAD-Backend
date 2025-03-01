@@ -1,7 +1,7 @@
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js/driver';
 import { eq, isNull, and } from 'drizzle-orm';
-import { SchemaType } from '@/drizzle/schema/type';
-import { supplier } from '@/drizzle/schema/ims';
+import { SchemaType } from '../../../../drizzle/schema/type';
+import { supplier } from '../../../../drizzle/schema/ims';
 import { CreateSupplier } from './supplier.model';
 
 export class SupplierService {

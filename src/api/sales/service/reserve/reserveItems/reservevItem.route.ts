@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { validateRequest } from '@/src/middlewares';
-import { db } from '@/drizzle/pool';
+import { validateRequest } from '../../../../../../src/middlewares';
+import { db } from '../../../../../../drizzle/pool';
 import { ReserveItemController } from './reservevItem.controller';
 import { validateReserveItemID } from './reservevItem.middleware';
 import { CreateReserveItem, UpdateReserveItem } from './reservevItem.model';

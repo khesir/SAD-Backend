@@ -7,7 +7,7 @@ import {
   varchar,
 } from 'drizzle-orm/pg-core';
 import { jobOrder } from './jobOrder.schema';
-import { product } from '@/drizzle/schema/ims';
+import { product } from '../../../../../drizzle/schema/ims';
 
 export const jobOrderItem = pgTable('job_order_items', {
   job_order_item_id: serial('job_order_item_id').primaryKey(),

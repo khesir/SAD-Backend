@@ -1,5 +1,5 @@
 import { NextFunction, Response, Request } from 'express';
-import { SupabaseService } from '@/supabase/supabase.service';
+import { SupabaseService } from '../../supabase/supabase.service';
 
 export async function AuthGuard(
   req: Request,

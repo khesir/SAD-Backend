@@ -1,8 +1,8 @@
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { and, asc, desc, eq, isNull, sql } from 'drizzle-orm';
 import { CreateSerialize } from './serialize.model';
-import { SchemaType } from '@/drizzle/schema/type';
-import { product, serializeProducts } from '@/drizzle/schema/ims';
+import { SchemaType } from '../../../../../drizzle/schema/type';
+import { product, serializeProducts } from '../../../../../drizzle/schema/ims';
 
 export class SerializeItemService {
   private db: PostgresJsDatabase<SchemaType>;

@@ -5,7 +5,7 @@ import {
   serial,
   timestamp,
 } from 'drizzle-orm/pg-core';
-import { customer } from '@/drizzle/schema/customer';
+import { customer } from '../../../../../drizzle/schema/customer';
 
 export const reserveStatusEnum = pgEnum('reserveStatusEnum', [
   'Reserved',

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { db } from '@/drizzle/pool';
-import { validateRequest } from '@/src/middlewares';
+import { db } from '../../../../../drizzle/pool';
+import { validateRequest } from '../../../../../src/middlewares';
 import { SalesItemController } from './salesItem.controller';
 import { validateSalesItemID } from './salesItem.middleware';
 import { CreateSalesItem, UpdateSalesItem } from './salesItem.model';
