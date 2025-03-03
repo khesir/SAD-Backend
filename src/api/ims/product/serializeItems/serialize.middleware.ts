@@ -1,7 +1,7 @@
 import { eq, and, isNull } from 'drizzle-orm';
 import { NextFunction, Request, Response } from 'express';
 
-import log from '@/lib/logger';
+import log from '../../../../../lib/logger';
 import { db } from '@/drizzle/pool';
 import { serializeProduct } from '@/drizzle/schema/ims';
 
