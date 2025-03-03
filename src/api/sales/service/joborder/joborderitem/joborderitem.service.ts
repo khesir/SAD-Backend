@@ -1,9 +1,6 @@
-import { product } from '../../../../../../drizzle/schema/ims';
-import {
-  jobOrder,
-  jobOrderItem,
-} from '../../../../../../drizzle/schema/services';
-import { SchemaType } from '../../../../../../drizzle/schema/type';
+import { product } from '@/drizzle/schema/ims';
+import { jobOrder, jobOrderItem } from '@/drizzle/schema/services';
+import { SchemaType } from '@/drizzle/schema/type';
 import { and, eq, isNull } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 

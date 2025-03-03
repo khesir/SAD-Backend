@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js/driver';
 
-import { HttpStatus } from '../../../../../lib/config';
+import { HttpStatus } from '@/lib/config';
 import { EmployeeService } from './employee.service';
-import { SchemaType } from '../../../../../drizzle/schema/type';
+import { SchemaType } from '@/drizzle/schema/type';
 
 export class EmployeeController {
   private employeeService: EmployeeService;

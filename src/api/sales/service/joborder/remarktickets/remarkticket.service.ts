@@ -1,12 +1,8 @@
 import { and, eq, isNull, sql, asc, desc } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateRemarkTickets } from './remarkticket.model';
-import {
-  jobOrder,
-  remarkTickets,
-  remarkType,
-} from '../../../../../../drizzle/schema/services';
-import { SchemaType } from '../../../../../../drizzle/schema/type';
+import { jobOrder, remarkTickets, remarkType } from '@/drizzle/schema/services';
+import { SchemaType } from '@/drizzle/schema/type';
 
 export class RemarkTicketsService {
   private db: PostgresJsDatabase<SchemaType>;

@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { db } from '../../../../drizzle/pool';
-import log from '../../../../lib/logger';
-import { validateRequest } from '../../../../src/middlewares';
+import { db } from '@/drizzle/pool';
+import log from '@/lib/logger';
+import { validateRequest } from '@/src/middlewares';
 import { CustomerGroupController } from './customergroup.controller';
 import { validateCustomerID } from '../customer/customer.middleware';
 import { validateCustomerGroupID } from './customergroup.middleware';

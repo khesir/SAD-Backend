@@ -1,11 +1,11 @@
 import { Router } from 'express';
 import { EmploymentInformationController } from './employmentInformation.controller';
-import { db } from '../../../../../drizzle/pool';
+import { db } from '@/drizzle/pool';
 import {
   validateEmployeeId,
   validateEmploymentId,
 } from './employmentInformation.middlewares';
-import { validateRequest } from '../../../../../src/middlewares';
+import { validateRequest } from '@/src/middlewares';
 import { EmploymentInformation } from './employmentInformation.model';
 
 const employmentInformationRoute = Router({ mergeParams: true });

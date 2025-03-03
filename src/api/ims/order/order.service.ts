@@ -1,8 +1,8 @@
 import { eq, isNull, sql, asc, desc, and } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js/driver';
 import { CreateOrder } from './order.model';
-import { order, orderItem, supplier } from '../../../../drizzle/schema/ims';
-import { SchemaType } from '../../../../drizzle/schema/type';
+import { order, orderItem, supplier } from '@/drizzle/schema/ims';
+import { SchemaType } from '@/drizzle/schema/type';
 
 export class OrderService {
   private db: PostgresJsDatabase<SchemaType>;

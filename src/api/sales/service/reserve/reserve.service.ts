@@ -1,9 +1,9 @@
 import { and, eq, isNull, asc, desc, sql } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateReserve } from './reserve.model';
-import { customer } from '../../../../../drizzle/schema/customer';
-import { reserve } from '../../../../../drizzle/schema/services';
-import { SchemaType } from '../../../../../drizzle/schema/type';
+import { customer } from '@/drizzle/schema/customer';
+import { reserve } from '@/drizzle/schema/services';
+import { SchemaType } from '@/drizzle/schema/type';
 
 export class ReserveService {
   private db: PostgresJsDatabase<SchemaType>;

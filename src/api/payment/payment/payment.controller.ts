@@ -1,8 +1,8 @@
-import { HttpStatus } from '../../../../lib/HttpStatus';
+import { HttpStatus } from '@/lib/HttpStatus';
 import { Request, Response, NextFunction } from 'express';
 import { PaymentService } from './payment.service';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js/driver';
-import { SchemaType } from '../../../../drizzle/schema/type';
+import { SchemaType } from '@/drizzle/schema/type';
 
 export class PaymentController {
   private paymentService: PaymentService;

@@ -1,7 +1,7 @@
 import { integer, pgTable, serial, timestamp } from 'drizzle-orm/pg-core';
-import { product } from '../product/product.schema';
+import { product } from '@/product/product.schema';
 import { discount } from './discount.schema';
-import { category } from '../product/category.schema';
+import { category } from '@/product/category.schema';
 
 export const discountProducts = pgTable('discount_p', {
   discount_product_id: serial('discount_p_id').primaryKey(),

@@ -1,6 +1,6 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
-import { Login } from '../src/auth/auth.model';
-import { generateUniqueFileName } from '../lib/datefns';
+import { Login } from '@/src/auth/auth.model';
+import { generateUniqueFileName } from '@/lib/datefns';
 
 export class SupabaseService {
   private static instance: SupabaseService;

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { validateRequest } from '../../../../src/middlewares';
-import { db } from '../../../../drizzle/pool';
+import { validateRequest } from '@/src/middlewares';
+import { db } from '@/drizzle/pool';
 import { PositionController } from './position.controller';
 import { validatePositionID } from './position.middleware';
 import { CreatePosition, UpdatePosition } from './position.model';

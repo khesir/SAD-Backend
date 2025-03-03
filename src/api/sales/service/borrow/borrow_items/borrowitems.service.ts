@@ -1,8 +1,8 @@
 import { and, eq, isNull, asc, desc, sql } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { borrow, borrowItems } from '../../../../../../drizzle/schema/services';
-import { SchemaType } from '../../../../../../drizzle/schema/type';
-import { product } from '../../../../../../drizzle/schema/ims';
+import { borrow, borrowItems } from '@/drizzle/schema/services';
+import { SchemaType } from '@/drizzle/schema/type';
+import { product } from '@/drizzle/schema/ims';
 import { CreateBorrowItem } from './borrowitems.model';
 
 export class BorrowItemService {

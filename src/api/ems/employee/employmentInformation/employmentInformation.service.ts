@@ -6,8 +6,8 @@ import {
   employmentInformation,
   department,
   designation,
-} from '../../../../../drizzle/schema/ems';
-import { SchemaType } from '../../../../../drizzle/schema/type';
+} from '@/drizzle/schema/ems';
+import { SchemaType } from '@/drizzle/schema/type';
 
 export class EmploymentInformationService {
   private db: PostgresJsDatabase<SchemaType>;

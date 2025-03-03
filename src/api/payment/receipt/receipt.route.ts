@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { validateRequest } from '../../../../src/middlewares';
-import { db } from '../../../../drizzle/pool';
+import { validateRequest } from '@/src/middlewares';
+import { db } from '@/drizzle/pool';
 import { ReceiptController } from './receipt.controller';
 import { validateReceiptID } from './receipt.middleware';
 import { CreateReceipt, UpdateReceipt } from './receipt.model';

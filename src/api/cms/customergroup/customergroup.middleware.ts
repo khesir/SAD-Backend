@@ -1,6 +1,6 @@
-import { db } from '../../../../drizzle/pool';
-import { customerGroup } from '../../../../drizzle/schema/customer';
-import log from '../../../../lib/logger';
+import { db } from '@/drizzle/pool';
+import { customerGroup } from '@/drizzle/schema/customer';
+import log from '@/lib/logger';
 import { and, eq, isNull } from 'drizzle-orm';
 import { NextFunction, Request, Response } from 'express';
 

@@ -1,9 +1,9 @@
 import { and, eq, isNull, sql, asc, desc } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js/driver';
 import { CreateReceipt, UpdateReceipt } from './receipt.model';
-import { payment } from '../../../../drizzle/schema/payment/schema/payment.schema';
-import { receipt } from '../../../../drizzle/schema/payment/schema/receipt.schema';
-import { SchemaType } from '../../../../drizzle/schema/type';
+import { payment } from '@/drizzle/schema/payment/schema/payment.schema';
+import { receipt } from '@/drizzle/schema/payment/schema/receipt.schema';
+import { SchemaType } from '@/drizzle/schema/type';
 
 export class ReceiptService {
   private db: PostgresJsDatabase<SchemaType>;

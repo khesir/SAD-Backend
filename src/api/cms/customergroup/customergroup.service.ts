@@ -1,7 +1,7 @@
 import { and, eq, isNull, sql, desc, asc } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { SchemaType } from '../../../../drizzle/schema/type';
-import { customerGroup } from '../../../../drizzle/schema/customer';
+import { SchemaType } from '@/drizzle/schema/type';
+import { customerGroup } from '@/drizzle/schema/customer';
 
 export class CustomerGroupService {
   private db: PostgresJsDatabase<SchemaType>;

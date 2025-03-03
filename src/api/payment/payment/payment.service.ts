@@ -1,10 +1,10 @@
 import { and, eq, isNull, sql, asc, desc } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js/driver';
 import { CreatePayment } from './payment.model';
-import { payment } from '../../../../drizzle/schema/payment/schema/payment.schema';
-import { SchemaType } from '../../../../drizzle/schema/type';
-import { borrow, jobOrder } from '../../../../drizzle/schema/services';
-import { sales } from '../../../../drizzle/schema/sales';
+import { payment } from '@/drizzle/schema/payment/schema/payment.schema';
+import { SchemaType } from '@/drizzle/schema/type';
+import { borrow, jobOrder } from '@/drizzle/schema/services';
+import { sales } from '@/drizzle/schema/sales';
 
 export class PaymentService {
   private db: PostgresJsDatabase<SchemaType>;

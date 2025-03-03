@@ -1,9 +1,9 @@
 import { and, eq, isNull, asc, desc, sql } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { SchemaType } from '../../../../../drizzle/schema/type';
-import { discount } from '../../../../../drizzle/schema/ims';
-import { customer } from '../../../../../drizzle/schema/customer';
-import { couponredemptions } from '../../../../../drizzle/schema/ims/schema/discount/couponredeem';
+import { SchemaType } from '@/drizzle/schema/type';
+import { discount } from '@/drizzle/schema/ims';
+import { customer } from '@/drizzle/schema/customer';
+import { couponredemptions } from '@/drizzle/schema/ims/schema/discount/couponredeem';
 
 export class CouponRedemptionService {
   private db: PostgresJsDatabase<SchemaType>;

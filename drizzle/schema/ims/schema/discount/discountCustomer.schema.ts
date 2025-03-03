@@ -1,5 +1,5 @@
-import { customer } from '../../../../../drizzle/schema/customer';
-import { customerGroup } from '../../../../../drizzle/schema/customer/schema/customerGroup.schema';
+import { customer } from '@/drizzle/schema/customer';
+import { customerGroup } from '@/drizzle/schema/customer/schema/customerGroup.schema';
 import { integer, pgTable, serial, timestamp } from 'drizzle-orm/pg-core';
 import { discount } from './discount.schema';
 

@@ -3,7 +3,7 @@ import {
   item_record,
   SchemaType,
   variant,
-} from '../../../../../drizzle/drizzle.config';
+} from '@/drizzle/drizzle.config';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateItem } from './p_det.model';
 import { isNull, eq, sql, and, asc, desc } from 'drizzle-orm';

@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { faker } from '@faker-js/faker';
 
-import log from '../lib/logger';
+import log from '@/lib/logger';
 import { db, pool } from './pool';
 import { type PostgresJsDatabase } from 'drizzle-orm/postgres-js';
-import { SupabaseService } from '../supabase/supabase.service';
+import { SupabaseService } from '@/supabase/supabase.service';
 import * as fs from 'fs';
 import * as path from 'path';
 import mime from 'mime';

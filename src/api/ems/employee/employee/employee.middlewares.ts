@@ -1,11 +1,11 @@
 import { eq, and, isNull } from 'drizzle-orm';
 import { NextFunction, Request, Response } from 'express';
 
-import log from '../../../../../lib/logger';
-import { db } from '../../../../../drizzle/pool';
-import { HttpStatus } from '../../../../../lib/HttpStatus';
+import log from '@/lib/logger';
+import { db } from '@/drizzle/pool';
+import { HttpStatus } from '@/lib/HttpStatus';
 import multer from 'multer';
-import { employee } from '../../../../../drizzle/schema/ems';
+import { employee } from '@/drizzle/schema/ems';
 
 export async function validateEmployeeId(
   req: Request,

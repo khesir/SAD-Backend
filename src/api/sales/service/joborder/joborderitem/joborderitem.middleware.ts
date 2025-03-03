@@ -1,11 +1,11 @@
 import { eq, and, isNull } from 'drizzle-orm';
 import { NextFunction, Request, Response } from 'express';
 
-import log from '../../../../../../lib/logger';
-import { db } from '../../../../../../drizzle/pool';
-import { HttpStatus } from '../../../../../../lib/HttpStatus';
-import { employee } from '../../../../../../drizzle/schema/ems';
-import { jobOrderItem } from '../../../../../../drizzle/schema/services';
+import log from '@/lib/logger';
+import { db } from '@/drizzle/pool';
+import { HttpStatus } from '@/lib/HttpStatus';
+import { employee } from '@/drizzle/schema/ems';
+import { jobOrderItem } from '@/drizzle/schema/services';
 
 // There's a globally used
 // middleware like error handling and schema validation

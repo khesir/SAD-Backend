@@ -1,9 +1,9 @@
 import { and, eq, isNull, sql, asc, desc } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateSalesItem } from './salesItem.model';
-import { product } from '../../../../../drizzle/schema/ims';
-import { SchemaType } from '../../../../../drizzle/schema/type';
-import { sales, salesItems } from '../../../../../drizzle/schema/sales';
+import { product } from '@/drizzle/schema/ims';
+import { SchemaType } from '@/drizzle/schema/type';
+import { sales, salesItems } from '@/drizzle/schema/sales';
 
 export class SalesItemService {
   private db: PostgresJsDatabase<SchemaType>;

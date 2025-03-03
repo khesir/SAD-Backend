@@ -1,8 +1,8 @@
 import { eq, isNull } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateRemarkType } from './remarktype.model';
-import { SchemaType } from '../../../../../../drizzle/schema/type';
-import { remarkType } from '../../../../../../drizzle/schema/services/schema/joborder/remarkType.schema';
+import { SchemaType } from '@/drizzle/schema/type';
+import { remarkType } from '@/drizzle/schema/services/schema/joborder/remarkType.schema';
 
 export class RemarkTypeService {
   private db: PostgresJsDatabase<SchemaType>;

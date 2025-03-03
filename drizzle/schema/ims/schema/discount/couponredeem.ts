@@ -1,6 +1,6 @@
 import { integer, pgTable, serial, timestamp } from 'drizzle-orm/pg-core';
 import { discount } from './discount.schema';
-import { customer } from '../../../../../drizzle/schema/customer';
+import { customer } from '@/drizzle/schema/customer';
 
 export const couponredemptions = pgTable('couponredemptions', {
   couponredemptions_id: serial('couponredemptions_id').primaryKey(),

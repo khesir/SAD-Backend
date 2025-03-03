@@ -2,8 +2,8 @@ import { asc, desc, eq, isNull, and, sql, like, or } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js/driver';
 
 import { CreateEmployee, UpdateEmployee } from './employee.model';
-import { SupabaseService } from '../../../../../supabase/supabase.service';
-import { SchemaType } from '../../../../../drizzle/schema/type';
+import { SupabaseService } from '@/supabase/supabase.service';
+import { SchemaType } from '@/drizzle/schema/type';
 import {
   employee,
   personalInformation,
@@ -11,7 +11,7 @@ import {
   department,
   designation,
   employeeRoles,
-} from '../../../../../drizzle/schema/ems';
+} from '@/drizzle/schema/ems';
 
 export class EmployeeService {
   private db: PostgresJsDatabase<SchemaType>;

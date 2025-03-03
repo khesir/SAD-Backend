@@ -1,14 +1,14 @@
 import { and, eq, isNull, sql, asc, desc } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateJobOrder, UpdateJobOrder } from './joborder.model';
-import { customer } from '../../../../../drizzle/schema/customer';
-import { employee } from '../../../../../drizzle/schema/ems';
+import { customer } from '@/drizzle/schema/customer';
+import { employee } from '@/drizzle/schema/ems';
 import {
   assignedEmployees,
   jobOrder,
   jobOrderType,
-} from '../../../../../drizzle/schema/services';
-import { SchemaType } from '../../../../../drizzle/schema/type';
+} from '@/drizzle/schema/services';
+import { SchemaType } from '@/drizzle/schema/type';
 
 export class JobOrderService {
   private db: PostgresJsDatabase<SchemaType>;

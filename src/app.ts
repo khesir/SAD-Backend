@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 
-import log from '../lib/logger';
+import log from '@/lib/logger';
 
 import MessageResponse from './interfaces/MessageResponse';
 

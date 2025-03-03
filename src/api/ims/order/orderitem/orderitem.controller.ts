@@ -1,8 +1,8 @@
-import { HttpStatus } from '../../../../../lib/HttpStatus';
+import { HttpStatus } from '@/lib/HttpStatus';
 import { Request, Response, NextFunction } from 'express';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { OrderItemService } from './orderitem.service';
-import { SchemaType } from '../../../../../drizzle/schema/type';
+import { SchemaType } from '@/drizzle/schema/type';
 
 export class OrderItemsController {
   private orderitemService: OrderItemService;

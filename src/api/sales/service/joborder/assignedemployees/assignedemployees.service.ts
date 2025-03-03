@@ -1,12 +1,9 @@
 import { and, eq, isNull } from 'drizzle-orm';
 import { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import { CreateAssignedEmployees } from './assignedemployees.model';
-import { employee } from '../../../../../../drizzle/schema/ems';
-import {
-  assignedEmployees,
-  jobOrder,
-} from '../../../../../../drizzle/schema/services';
-import { SchemaType } from '../../../../../../drizzle/schema/type';
+import { employee } from '@/drizzle/schema/ems';
+import { assignedEmployees, jobOrder } from '@/drizzle/schema/services';
+import { SchemaType } from '@/drizzle/schema/type';
 
 export class AssignedEmployeeService {
   private db: PostgresJsDatabase<SchemaType>;

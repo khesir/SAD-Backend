@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { DesignationController } from './designation.controller';
-import { validateRequest } from '../../../../src/middlewares';
+import { validateRequest } from '@/src/middlewares';
 import { CreateDesignation, UpdateDesignation } from './designation.model';
 import { validateDesignationID } from './designation.middlewares';
-import { db } from '../../../../drizzle/pool';
+import { db } from '@/drizzle/pool';
 
 const designationRoute = Router({ mergeParams: true });
 const designationController = new DesignationController(db);
